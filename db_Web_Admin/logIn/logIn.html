@@ -1,0 +1,27 @@
+<div class="container"> 
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Server Connection</h2>
+
+        <label for="inputHost" class="sr-only">Host</label> <!-- Code for Screen Readers XD -->
+        <input type="text" ng-model="host" id="inputHost" class="form-control" placeholder="Localhost" required autofocus>
+
+        <label for="inputPort" class="sr-only">Port</label>
+        <input type="text" ng-model="port" id="inputPort" class="form-control" placeholder="5432" required>
+
+        <br>
+
+        <label for="inputDB" class="sr-only">Maintenance DB</label>
+        <input type="text" ng-model="dbname" id="inputDB" class="form-control" placeholder="postgres or ur own" required>
+
+        <br>
+
+        <label for="inputUser" class="sr-only">User</label>
+        <input type="text" ng-model="user" id="inputUser" class="form-control" placeholder="User" required>
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" ng-model="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+        <button class="btn btn-lg btn-primary btn-block" ng-click="doConnection()">Sign in</button>
+      </form>
+
+</div>
