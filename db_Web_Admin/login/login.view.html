@@ -1,0 +1,35 @@
+﻿<div class="container"> 
+    <form class="form-signin" ng-submit="vm.Connection()" role="form">
+        <h2 class="form-signin-heading">Server Connection</h2>
+
+        <label for="inputHost" class="sr-only">Host</label> <!-- Code for Screen Readers XD -->
+        <input type="text" id="inputHost" class="form-control" ng-model="vm.host" placeholder="Localhost" required autofocus>
+
+        <label for="inputPort" class="sr-only">Port</label>
+        <input type="text" id="inputPort" class="form-control" ng-model="vm.port" placeholder="5432" required>
+
+        <br>
+
+        <label for="inputDB" class="sr-only">Maintenance DB</label>
+        <input type="text" id="inputDB" class="form-control" ng-model="vm.dbname" placeholder="postgres or ur own" required>
+
+        <br>
+
+        <label for="inputUser" class="sr-only">User</label>
+        <input type="text" id="inputUser" class="form-control" ng-model="vm.user" placeholder="User" required>
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" ng-model="vm.password" placeholder="Password" required>
+
+        <button class="btn btn-lg btn-primary btn-block" ng-disabled="form.$invalid || vm.dataloading" type="submit">Sign in</button>
+
+        <!-- Loading gif to display while data is coming-->
+        <img ng-if="vm.dataLoading" src="http://i.stack.imgur.com/pHHzT.gif" />
+
+
+        <!-- The code belove can be usefull in the future>
+        <a href="#/register" class="btn btn-link">Register</a -->
+
+    </form>
+
+</div>

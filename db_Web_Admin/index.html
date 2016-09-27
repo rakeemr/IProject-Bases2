@@ -1,35 +1,37 @@
 <!DOCTYPE html>
-<html lang="es" ng-app="webAdminApp">
-  <head>
-    <meta charset="utf-8">
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <meta name="Postgres Web Managament">
     <meta name="Andres Garcia Salas">
-    <link rel="icon" href="IMAGES/ICONS/page_icon2.ico">
+    <link rel="icon" ng-href="app-content/app-images/ICONS/page_icon2.ico">
 
     <title>Sign In for Postgres Web Management</title>
 
-    <!-- Bootstrap core -->
-    <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link href="app-content/app.css" rel="stylesheet" />
 
-    <link href="CSS/server_conn.css" rel="stylesheet">
+</head>
+<body>
 
-  </head>
+    <!-- div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div--> 
+    <div ng-view></div>
 
-  <body>
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="//code.angularjs.org/1.5.8/angular.js"></script>
+    <script src="//code.angularjs.org/1.5.8/angular-route.js"></script>
+    <script src="//code.angularjs.org/1.5.8/angular-cookies.js"></script>
 
-    <div ui-view></div>
+    <script src="app.js"></script>
+    <script src="app-services/authentication.service.js"></script>
+    <script src="app-services/flash.service.js"></script>
 
-    <script type="text/javascript" src="JS/angular.min.js"></script>
-    <script type="text/javascript" src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+    <!-- Fake user service for demo that uses local storage -->
+    <script src="app-services/user.service.local-storage.js"></script>
 
-    <script type="text/javascript" src="app.js">
-         
-    </script>
-
-    <script src="logIn/logIn.controller.js"></script>
     <script src="dashboard/dashboard.controller.js"></script>
-
-  </body>
+    <script src="login/login.controller.js"></script>
+</body>
 </html>
